@@ -338,9 +338,9 @@ Issued by: GhostTrap Content Protection System
 
 def _send_legal_email(watermark_id, perpetrator_ip, perpetrator_browser, timestamp, fake_score):
     notice = _build_notice(watermark_id, perpetrator_ip, perpetrator_browser, timestamp, fake_score)
-    yag = yagmail.SMTP("navyaspnk26@gmail.com", "tftdnvvkablpvmea")
+    yag = yagmail.SMTP("email", "app_password")
     yag.send(
-        to="rachfpatil@gmail.com",
+        to="predator_email",
         subject="⚠️ Legal Notice — GhostTrap Content Protection",
         contents=notice,
     )
